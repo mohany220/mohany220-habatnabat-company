@@ -57,7 +57,7 @@ function Contact() {
                     >
                         <div>
                             <strong>📍 العنوان</strong>
-                            <p>مصر</p>
+                            <p>السعودية الرياض</p>
                         </div>
 
                         <div>

@@ -1,7 +1,7 @@
 function Stats() {
     const stats = [
         {
-            number: "10+",
+            number: "20+",
             title: "سنوات خبرة",
             icon: "🏆",
         },
@@ -16,8 +16,8 @@ function Stats() {
             icon: "🤝",
         },
         {
-            number: "20+",
-            title: "محافظة وسوق",
+            number: "1000+",
+            title: "توريد لجميع انحاء المملكة والتصدير خارج المملكة",
             icon: "🌍",
         },
     ];

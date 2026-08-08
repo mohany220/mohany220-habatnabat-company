@@ -122,11 +122,11 @@ function Footer() {
                     </h3>
 
                     <p className="footer-text">
-                        📍 مصر
+                        📍 السعودية
                     </p>
 
                     <p className="footer-text">
-                        📞 01000000000
+                        📞 00966547373896
                     </p>
 
                     <p className="footer-text">
