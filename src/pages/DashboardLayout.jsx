@@ -4,23 +4,37 @@ import Topbar from "../components/Topbar";
 
 export default function DashboardLayout() {
     return (
-        <>
+        <div
+            style={{
+                minHeight: "100vh",
+                background: "#f4f6f9",
+                direction: "rtl",
+            }}
+        >
+
+            {/* القائمة الجانبية */}
             <Sidebar />
 
+            {/* المحتوى الرئيسي */}
             <div
                 style={{
                     marginRight: "260px",
-                    background: "#f4f6f9",
                     minHeight: "100vh",
-                    direction: "rtl",
                 }}
             >
+
                 <Topbar />
 
-                <div style={{ padding: "30px" }}>
+                <div
+                    style={{
+                        padding: "30px",
+                    }}
+                >
                     <Outlet />
                 </div>
+
             </div>
-        </>
+
+        </div>
     );
 }

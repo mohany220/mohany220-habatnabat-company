@@ -1,13 +1,18 @@
 export default function About() {
     return (
         <section
+            id="about"
+            data-aos="fade-right"
             style={{
-                padding: "80px 10%",
+                padding: "80px 5%",
                 background: "#f8f8f8",
+                direction: "rtl",
             }}
         >
             <div
                 style={{
+                    maxWidth: "1400px",
+                    margin: "auto",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
@@ -15,10 +20,15 @@ export default function About() {
                     flexWrap: "wrap",
                 }}
             >
-                <div style={{ flex: 1 }}>
+                {/* النص */}
+                <div
+                    style={{
+                        flex: "1 1 500px",
+                    }}
+                >
                     <h2
                         style={{
-                            fontSize: "42px",
+                            fontSize: "clamp(30px, 5vw, 42px)",
                             color: "#00695c",
                             marginBottom: "20px",
                         }}
@@ -28,24 +38,26 @@ export default function About() {
 
                     <p
                         style={{
-                            fontSize: "20px",
+                            fontSize: "clamp(16px, 2vw, 20px)",
                             lineHeight: "2",
                             color: "#555",
+                            margin: 0,
                         }}
                     >
-                        مصنع حبة نبات متخصص في تصنيع وتعبئة الملح الغذائي بأعلى
-                        معايير الجودة العالمية، ونلتزم بتقديم منتجات غذائية آمنة
-                        باستخدام أحدث خطوط الإنتاج، مع الالتزام الكامل بشهادات
-                        الجودة العالمية وخدمة عملائنا داخل مصر وخارجها.
+                        مصنع حبة نبات متخصص في تصنيع وتعبئة الملح
+                        الغذائي بأعلى معايير الجودة العالمية، ونلتزم
+                        بتقديم منتجات غذائية آمنة باستخدام أحدث خطوط
+                        الإنتاج، مع الالتزام الكامل بشهادات الجودة
+                        العالمية وخدمة عملائنا داخل مصر وخارجها.
                     </p>
-
-                    <br />
 
                     <ul
                         style={{
-                            fontSize: "20px",
-                            lineHeight: "2",
+                            fontSize: "clamp(16px, 2vw, 20px)",
+                            lineHeight: "2.2",
                             color: "#444",
+                            marginTop: "25px",
+                            paddingRight: "25px",
                         }}
                     >
                         <li>✔ جودة عالمية</li>
@@ -55,18 +67,67 @@ export default function About() {
                     </ul>
                 </div>
 
-                <div style={{ flex: 1 }}>
+                {/* الصورة */}
+                <div
+                    style={{
+                        flex: "1 1 500px",
+                    }}
+                >
                     <img
                         src="/factory.jpg"
                         alt="مصنع حبة نبات"
                         style={{
                             width: "100%",
+                            height: "auto",
+                            maxHeight: "500px",
+                            objectFit: "cover",
                             borderRadius: "20px",
-                            boxShadow: "0 10px 30px rgba(0,0,0,.2)",
+                            boxShadow:
+                                "0 10px 30px rgba(0,0,0,.2)",
+                            display: "block",
                         }}
                     />
                 </div>
             </div>
+
+            <style>
+                {`
+                    @media (max-width: 800px) {
+                        #about {
+                            padding: 60px 20px !important;
+                        }
+
+                        #about > div {
+                            flex-direction: column;
+                            gap: 35px !important;
+                        }
+
+                        #about > div > div {
+                            width: 100%;
+                            flex: 1 1 100% !important;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        #about {
+                            padding: 50px 15px !important;
+                        }
+
+                        #about h2 {
+                            text-align: center;
+                        }
+
+                        #about p,
+                        #about ul {
+                            font-size: 16px !important;
+                        }
+
+                        #about img {
+                            border-radius: 15px;
+                        }
+                    }
+                `}
+            </style>
         </section>
     );
 }
